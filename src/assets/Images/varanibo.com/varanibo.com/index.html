@@ -1,0 +1,828 @@
+<style>
+    @media (min-width: 1200px) {
+        .container {
+            max-width: 900px !important;
+        }
+        .tns-outer [aria-controls],
+        .tns-outer [data-action] {
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="TechyDevs" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="" />
+
+    <title>Varanibo - Family Basa Vara In Bangladesh</title>
+    <meta name="description" content="Vara Nibo-Family Basa Vara sounds like an innovative and customer-centric home rental service, dedicated to providing travelers with top-notch accommodation options and exceptional service. Their emphasis on offering a diverse range of handpicked properties, seamless booking processes, and personalized customer support sets them apart in the travel accommodation industry. By prioritizing quality, comfort, and affordability, Vara Nibo aims to redefine the standards for unforgettable travel experiences. Whether it&#039;s a cozy cottage, a luxury villa, or a chic urban apartment, they seem to have something for every type of traveler, ensuring that each guest finds their dream home away from home.">
+    <meta name="keywords" content="Varanibo -Family Basa Vara	
+Basa Vara
+Family Basa Vara In Sylhet
+House Rental Service Bangladesh
+Property Rent For Family
+Family Basa Vara Bangladesh
+vasa bara in bangladesh, vasa vara in sylhet,vasa bara,">
+
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://varanibo.com/assets/front/images/favicon.png" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+
+    <!-- Template CSS Files -->
+
+    <link rel="stylesheet" href="https://varanibo.com/assets/front/css/flag-icon.min.css" />
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tom-select@2.0.0-rc.4/dist/css/tom-select.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://varanibo.com/assets/front/css/index.css" />
+    <link rel="stylesheet" href="https://varanibo.com/assets/front/css/new-mobile-style.css" />
+    <link rel="stylesheet" href="https://varanibo.com/assets/front/css/new-style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- toastr -->
+    <link rel="stylesheet" href="https://varanibo.com/assets/css/toastr.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" />
+    <style>
+        .select2-container {
+            box-sizing: border-box;
+            display: inline-block;
+            margin: 0;
+            position: relative;
+            padding: 11px 0px;
+        }
+
+        .modal-dialog {
+            margin-top: 140px !important;
+        }
+
+        .select2-container--open .select2-selection {
+            box-shadow: none !important;
+        }
+
+        .select2-container--open .select2-selection .select2-selection__arrow {
+            z-index: 9999;
+        }
+
+        .select2-dropdown .select2-search {
+            padding: 0;
+        }
+
+        .select2-dropdown .select2-search .select2-search__field {
+            border-top: 0.5px solid #0abf93;
+            border-left: none;
+            border-right: none;
+            padding: 4px 12px;
+            color: #606469;
+        }
+
+        .select2-dropdown.select2-dropdown--above {
+            border-bottom: 0.5px solid #0abf93;
+            border-top: 0.5px solid #0abf93;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            margin-top: 0px !important;
+            max-height: 200px !important;
+            overflow-y: scroll;
+        }
+
+        .select2-dropdown.select2-dropdown--above .select2-search .select2-search__field {
+            border-bottom: 0;
+            border-top: 0.5px solid #0abf93;
+        }
+
+        .select2-container--default .select2-selection--single {
+            background-color: transparent;
+            border: none;
+            border-radius: 0;
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__clear {
+            cursor: pointer;
+            float: right;
+            font-weight: bold;
+            display: none;
+        }
+
+        .select2-container--open .select2-dropdown--below {
+            border-top: 0.5px solid #0abf93;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            max-height: 200px !important;
+            overflow-y: scroll;
+        }
+
+        @media (max-width: 575px) {
+            .select2-container--open .select2-dropdown--below {
+                border-top: none;
+                border-top-left-radius: 0;
+                width: none !important;
+                border-top-right-radius: 0;
+                max-height: 200px !important;
+                overflow-y: scroll;
+            }
+            .select2-container .select2-selection--single .select2-selection__rendered {
+                font-size: 11px;
+            }
+        }
+
+        .select2-container .select2-selection--single .select2-selection__rendered {
+            white-space: nowrap;
+            background: #fff;
+            color: #606469;
+            border-radius: 4px;
+            font-size: 16px;
+            height: 36px;
+            border: 1px solid #0abf93;
+            box-shadow: 0 0 30px -14px rgba(0, 0, 0, 0.233);
+            font-family: inherit;
+            padding: 3px 17px;
+            width: 100% !important;
+        }
+
+        .select2-results {
+            display: block;
+            font-size: 14px;
+            color: #606469;
+        }
+
+        .select2-results__option {
+            padding: 0px 6px;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .select2-container .select2-dropdown .select2-results ul .select2-results__option--highlighted[aria-selected] {
+            background-color: #ffffff;
+            color: #606469;
+        }
+
+        #tns1>.tns-item {
+            width: calc(33.3333%);
+            padding-right: 0px !important;
+        }
+
+        #tns1>.tns-item {
+            padding-right: 15px !important;
+        }
+
+        .select2-container .select2-selection--single .select2-selection__clear {
+            position: relative;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .select2-container .select2-selection--single .select2-selection__rendered {
+                width: 100% !important
+            }
+            .select2-dropdown {
+                margin-top: -8px !important;
+            }
+        }
+
+        @media (max-width: 718px) {
+            .select2-container .select2-selection--single .select2-selection__rendered {
+                width: 100% !important
+            }
+        }
+
+        .btn-group-vertical>.btn-group:after,
+        .btn-group-vertical>.btn-group:before,
+        .btn-toolbar:after,
+        .btn-toolbar:before,
+        .clearfix:after,
+        .clearfix:before,
+        .container-fluid:after,
+        .container-fluid:before,
+        .container:after,
+        .container:before,
+        .dl-horizontal dd:after,
+        .dl-horizontal dd:before,
+        .form-horizontal .form-group:after,
+        .form-horizontal .form-group:before,
+        .modal-footer:after,
+        .modal-footer:before,
+        .modal-header:after,
+        .modal-header:before,
+        .nav:after,
+        .nav:before,
+        .navbar-collapse:after,
+        .navbar-collapse:before,
+        .navbar-header:after,
+        .navbar-header:before,
+        .navbar:after,
+        .navbar:before,
+        .pager:after,
+        .pager:before,
+        .panel-body:after,
+        .panel-body:before,
+        .row:after,
+        .row:before {
+            display: none !important;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+        @media (max-width: 998px) {
+            .desktop {
+                display: none;
+            }
+            .mobile {
+                display: none;
+            }
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z68WGVVNXJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z68WGVVNXJ');
+    </script>
+</head>
+
+<body>
+    <!-- header side -->
+    <header>
+        <div class="container">
+            <h1 class="logo">
+                <a href="https://varanibo.com">
+                                                                        <img src="https://varanibo.com/assets/img/uploaded/202310051041logo 1.png" alt="logo">
+                                                            </a>
+            </h1>
+            <a href="https://varanibo.com/login" class="header-profile"><i class="bx bxs-user"></i> <span>Login</span></a>
+        </div>
+    </header>
+    <!-- header side end -->
+
+    <!-- top banner  -->
+    <div class="top-banner-mobile">
+        <div class="container">
+            <div class="top-banner-content-mobile">
+                <div class="top-banner-img">
+                    <img src="https://varanibo.com/assets/img/uploaded/banner/202310051028varanibo-banner.jpg" alt="Banner">
+                </div>
+                <a href="https://varanibo.com/login" id="create-post-btn">+ Create Post</a>
+            </div>
+        </div>
+    </div>
+    <!-- top banner  end -->
+
+    <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4112910847207141"-->
+    <!-- crossorigin="anonymous"></script>-->
+    <!-- 1st Ads -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112910847207141" data-ad-slot="8157890027" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    <!-- our service -->
+    <div class="our-service">
+        <div class="container">
+            <h2>Select Your Cateory From Below</h2>
+            <div class="our-service-content">
+                <!-- modal btn -->
+
+                <a data-toggle="modal" href="https://varanibo.com/HomeRent/all" role="button" class="our-service-box">
+                    <div class="our-service-box-img">
+                        <img src="https://varanibo.com/assets/img/uploaded/icon/Mask group1.png" alt="Service" />
+                    </div>
+                    <h4>Home Rent</h4>
+                    <p>(3452) Ads</p>
+                    <p style="color: #ef3a42;">Click to view the Ads.</p>
+                </a>
+
+
+
+                <a data-toggle="modal" href="https://varanibo.com/CommRent/all" role="button" class="our-service-box">
+                    <div class="our-service-box-img">
+                        <img src="https://varanibo.com/assets/img/uploaded/icon/Mask group-2.png" alt="Service" />
+                    </div>
+                    <h4>Commercial Rent</h4>
+                    <p>(147) Ads</p>
+                    <p style="color: #ef3a42;">Click to view the Ads.</p>
+                </a>
+
+
+
+                <!--<a data-toggle="modal" href="#" role="button" class="our-service-box box-dis">-->
+                <a data-toggle="modal" href="https://varanibo.com/Indoor/all" role="button" class="our-service-box ">
+                    <div class="our-service-box-img">
+                        <img src="https://varanibo.com/assets/img/uploaded/icon/Mask group-1.png" alt="Ind0oe" />
+                    </div>
+                    <h4>Indoor Game</h4>
+                    <p>(1) Ads</p>
+                    <!--<p>(0) Ads</p>-->
+                    <p style="color: #ef3a42;">Click to view the Ads.</p>
+                </a>
+
+
+                <div class="our-service-box box-dis">
+                    <div class="our-service-box-img">
+                        <img src="https://varanibo.com/assets/img/uploaded/icon/Mask group-3.png" alt="Service" />
+                    </div>
+                    <h4>Hotel Booking</h4>
+                    <p>00 Ads</p>
+
+                </div>
+                <div class="our-service-box box-dis">
+                    <div class="our-service-box-img">
+                        <img src="https://varanibo.com/assets/img/uploaded/icon/Mask group-5.png" alt="Service" />
+                    </div>
+                    <h4>Restaurant</h4>
+                    <p>00 Ads</p>
+
+                </div>
+                <div class="our-service-box box-dis">
+                    <div class="our-service-box-img">
+                        <img src="https://varanibo.com/assets/img/uploaded/icon/Mask group-6.png" alt="Service" />
+                    </div>
+                    <h4>Management</h4>
+                    <p>00 Ads</p>
+
+                </div>
+                <div class="our-service-box box-dis">
+                    <div class="our-service-box-img">
+                        <img src="https://varanibo.com/assets/img/uploaded/icon/Mask group.png" alt="Service" />
+                    </div>
+                    <h4>Vehicle Rent</h4>
+                    <p>00 Ads</p>
+
+                </div>
+
+                <div class="our-service-box box-dis">
+                    <div class="our-service-box-img">
+                        <img src="https://varanibo.com/assets/img/uploaded/icon/Mask group-4.png" alt="Service" />
+                    </div>
+                    <h4>Others</h4>
+                    <p>00 Ads</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- our service end -->
+    <!-- ================================ START BREADCRUMB AREA ================================= -->
+    <!-- our video -->
+    <div class="our-video">
+        <div class="container">
+            <div class="our-video-controll">
+                <h2>See Our Video</h2>
+                <div class="our-video-arrow">
+                    <i class="fa-solid fa-caret-left left-arrow"></i>
+                    <i class="fa-solid fa-caret-right right-arrow"></i>
+                </div>
+            </div>
+            <div class="our-video-content">
+                <div data-toggle="modal" href="#video9" role="button" class="our-video-content-card">
+                    <div class="our-video-box">
+                        <img src="https://varanibo.com/assets/img/uploaded/ads/202312300749New Varanibo Poster.jpg" alt="img" />
+                        <div class="video-box-overlay"></div>
+                        <div class="our-video-profile">
+                            <i class="bx bx-play"></i>
+                            <h6>How To Post in Vara nibo</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="video9" role="dialog" style="backdrop-filter: blur(5px);">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Please press the video</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <iframe width="100%" height="405" src="https://www.youtube.com/embed/za6woP47w18?" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- adds -->
+    <div class="adds">
+        <div class="container">
+            <div class="adds-content">
+                <div class="adds-box">
+                    <img src="https://varanibo.com/assets/img/uploaded/ads/202311070648Banyan-School.jpg" alt="Ads Null">
+                </div>
+                <div class="adds-box">
+                    <img src="https://varanibo.com/assets/img/uploaded/ads/202405070838Add-Banner-For-Varanibo.jpg" alt="Ads Null">
+                </div>
+                <div class="adds-box">
+                    <img src="https://varanibo.com/assets/img/uploaded/ads/202401011006Dort Varanibo.jpg" alt="Ads Null">
+                </div>
+                <div class="adds-box">
+                    <img src="https://varanibo.com/assets/img/uploaded/ads/202405070837Add-Banner-For-Varanibo.jpg" alt="Ads Null">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- adds end -->
+
+
+    <script>
+        function toShort(str, max = 18) {
+
+            if (str.length > max) {
+                return str.substring(0, max) + "....."
+            }
+
+            return str;
+
+        }
+    </script>
+    <script>
+        $(document).ready(function() {
+            // $('#country-dd').on('change', function () {
+            //     var idCountry = this.value;
+            //     $("#division-dd").html('');
+            //     $.ajax({
+            //         url: "https://varanibo.com/api/fetch-states",
+            //         type: "POST",
+            //         data: {
+            //             country_id: idCountry,
+            //             _token: 'Ic7oEBowYTuWzZZSHZqwFDEMHYDLIg7BsWa22qAk'
+            //         },
+            //         dataType: 'json',
+            //         success: function (result) {
+            //             $('#division-dd').html('<option value="">Select State</option>');
+            //             $.each(result.divisions, function (key, value) {
+            //                 $("#division-dd").append('<option value="' + value
+            //                     .id + '">' + value.division + '</option>');
+            //             });
+            //             $('#district-dd').html('<option value="">Select City</option>');
+            //         }
+            //     });
+            // });
+            $('.division-dd').on('change', function() {
+                var idDivision = this.value;
+                $(".district-dd").html('');
+                $.ajax({
+                    url: "https://varanibo.com/api/fetch-cities",
+                    type: "POST",
+                    data: {
+                        division_id: idDivision,
+                        _token: 'Ic7oEBowYTuWzZZSHZqwFDEMHYDLIg7BsWa22qAk'
+                    },
+                    dataType: 'json',
+                    success: function(res) {
+                        $('.district-dd').html('<option value="">Select District</option>');
+                        $.each(res.districts, function(key, value) {
+                            $(".district-dd").append('<option value="' + value
+                                .id + '">' + value.district + '</option>');
+                        });
+                        $('.upazila-dd').html('<option value="">Select upazila</option>');
+                    }
+                });
+            });
+            $('.district-dd').on('change', function() {
+                var idUpazila = this.value;
+                $(".upazila-dd").html('');
+                $.ajax({
+                    url: "https://varanibo.com/api/fetch-upazila",
+                    type: "POST",
+                    data: {
+                        district_id: idUpazila,
+                        _token: 'Ic7oEBowYTuWzZZSHZqwFDEMHYDLIg7BsWa22qAk'
+                    },
+                    dataType: 'json',
+                    success: function(res) {
+                        $('.upazila-dd').html('<option value="">Select Upazila</option>');
+                        $.each(res.upazilas, function(key, value) {
+                            $(".upazila-dd").append('<option value="' + value
+                                .id + '">' + toShort(value.upazila, 15) +
+                                '</option>');
+                        });
+                        // $('#area-dd').html('<option value="">Select area</option>');
+                    }
+                });
+            });
+            $('.upazila-dd').on('change', function() {
+                var idArea = this.value;
+                $(".area-dd").html('');
+                $.ajax({
+                    url: "https://varanibo.com/api/fetch-area",
+                    type: "POST",
+                    data: {
+                        upazila_id: idArea,
+                        _token: 'Ic7oEBowYTuWzZZSHZqwFDEMHYDLIg7BsWa22qAk'
+                    },
+                    dataType: 'json',
+                    success: function(res) {
+                        $('.area-dd').html('<option value="">Select area</option>');
+                        $.each(res.areas, function(key, value) {
+                            $(".area-dd").append('<option value="' + value.id + '">' +
+                                toShort(value.area, 15) + '</option>');
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script>
+        var slider = tns({
+            container: ".adds-content",
+            items: 1,
+            slideBy: 1,
+            autoplay: true,
+            loop: true,
+
+            autoplayResetOnVisibility: false,
+            autoplayButtonOutput: false,
+            autoplay: true,
+            controls: false,
+            nav: true,
+            gutter: 15,
+            mouseDrag: false,
+
+            navPosition: "bottom",
+
+
+            responsive: {
+                0: {
+                    items: 1,
+                },
+
+                908: {
+                    items: 1,
+                },
+            },
+        });
+    </script>
+
+    <!-- ================================  START FOOTER AREA ================================= -->
+    <div class="footer-nav">
+        <ul class="footer-nav-content">
+            <div class="container">
+                <li>
+                    <a href="https://varanibo.com"><i class="bx bxs-home"></i></a>
+                </li>
+                <li>
+                    <a href="https://varanibo.com/login" class="active"><i class="bx bx-plus"></i></a>
+                </li>
+                <li>
+                    <a href="https://varanibo.com/login"><i class="bx bxs-user"></i></a>
+                </li>
+            </div>
+            <p>Developed By <a href="https://opstelit.com/" target="_blank">Opstel IT </a> 2024 </p>
+        </ul>
+
+    </div>
+    <!-- end footer-area -->
+    <!-- ================================ START FOOTER AREA ================================= -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Template JS Files -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+    <script src="https://varanibo.com/assets/front/js/jquery-ui.js"></script>
+
+
+
+    <script src="https://varanibo.com/assets/front/js/main.js"></script>
+    <!-- toastr -->
+    <script src="https://varanibo.com/assets/js/toastr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.0.0-rc.4/dist/js/tom-select.complete.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <script src="https://varanibo.com/assets/front/js/dropdown.js"></script>
+
+    <script src="https://varanibo.com/assets/front/js/dependent.js"></script>
+    <script>
+        new TomSelect("#tom", {
+            create: false,
+            sortField: {
+                field: "text",
+                direction: "desc"
+            }
+        });
+        new TomSelect("#tom1", {
+            create: false,
+            sortField: {
+                field: "text",
+                direction: "desc"
+            }
+        });
+    </script>
+    <script>
+        new TomSelect(".tom", {
+            create: false,
+            sortField: {
+                field: "text",
+                direction: "desc"
+            }
+        });
+
+        new TomSelect(".tom2", {
+            create: false,
+            sortField: {
+                field: "text",
+                direction: "desc"
+            }
+        });
+        new TomSelect(".tom3", {
+            create: false,
+            sortField: {
+                field: "text",
+                direction: "desc"
+            }
+        });
+        new TomSelect(".tom4", {
+            create: false,
+            sortField: {
+                field: "text",
+                direction: "desc"
+            }
+        });
+        new TomSelect(".tom5", {
+            create: false,
+            sortField: {
+                field: "text",
+                direction: "desc"
+            }
+        });
+        new TomSelect(".tom6", {
+            create: false,
+            sortField: {
+                field: "text",
+                direction: "desc"
+            }
+        });
+    </script>
+
+    <script>
+    </script>
+
+
+    <script>
+        var elements = $(document).find("select.select_search");
+        for (var i = 0, l = elements.length; i < l; i++) {
+            var $select = $(elements[i]),
+                $label = $select.parents(".home_form_div").find("label");
+
+            $select.select2({
+                allowClear: true,
+                minimumResultsForSearch: 0,
+                theme: "bootstrap",
+                width: "100%",
+                selectOnClose: true,
+            });
+        }
+    </script>
+    <script>
+        var elements = $(document).find("select.select_search_tow");
+        for (var i = 0, l = elements.length; i < l; i++) {
+            var $select = $(elements[i]),
+                $label = $select.parents(".home_form_div").find("label");
+
+            $select.select2({
+                allowClear: true,
+                minimumResultsForSearch: 0,
+                theme: "bootstrap",
+                // width: "100%",
+                selectOnClose: true,
+            });
+        }
+    </script>
+    <script>
+        var slider = tns({
+            container: ".search-content-add-img",
+            items: 1,
+            slideBy: 1,
+            autoplay: true,
+            loop: true,
+
+            autoplayResetOnVisibility: false,
+            autoplayButtonOutput: false,
+            autoplay: true,
+            controls: false,
+            nav: false,
+            gutter: 15,
+            mouseDrag: false,
+
+            navPosition: "bottom",
+
+            responsive: {
+                0: {
+                    items: 1,
+                },
+
+                908: {
+                    items: 1,
+                },
+            },
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+
+    <script>
+        var slider = tns({
+            container: ".adds-content",
+            items: 1,
+            slideBy: 1,
+            autoplay: true,
+            loop: true,
+
+            autoplayResetOnVisibility: false,
+            autoplayButtonOutput: false,
+            autoplay: true,
+            controls: false,
+            nav: true,
+            gutter: 15,
+            mouseDrag: false,
+
+            navPosition: "bottom",
+
+
+            responsive: {
+                0: {
+                    items: 1,
+                },
+
+                908: {
+                    items: 1,
+                },
+            },
+        });
+    </script>
+    <script>
+        const videoSlideBtn = document.querySelector('.our-video-arrow')
+        var slider = tns({
+            container: ".our-video-content",
+            items: 2,
+            slideBy: 1,
+            autoplay: true,
+            loop: true,
+
+            autoplayResetOnVisibility: false,
+            autoplayButtonOutput: false,
+            autoplay: true,
+            controls: true,
+            nav: false,
+            gutter: 15,
+            mouseDrag: true,
+            fixedWidth: 130,
+            swipeAngle: false,
+            controlsContainer: videoSlideBtn,
+            prevButton: '.left-arrow',
+            nextButton: '.right-arrow',
+            // edgePadding: 25 ,
+            responsive: {
+                0: {
+                    items: 2,
+                },
+                600: {
+                    items: 3,
+                    fixedWidth: 150,
+                },
+                908: {
+                    items: 4,
+                    fixedWidth: 250,
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>

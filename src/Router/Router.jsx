@@ -19,17 +19,16 @@ const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
+                path: "/home-rent",
+                element: <HomeRent></HomeRent>
+            },
+            {
                 path: "/commercial-rent",
                 element: <CommercialRent></CommercialRent>
             },
             {   
-                path: '/commercial-rent/commercial-rent/:id',
-                loader:({params})=> fetch(`Commercialrent.json/${params.id}`),
+                path: 'commercial-rent/:id',
                 element: <SingleProduct></SingleProduct>
-            },
-            {
-                path: "/home-rent",
-                element: <HomeRent></HomeRent>
             },
 
         ]

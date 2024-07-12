@@ -1,12 +1,14 @@
 import { SlCalender } from "react-icons/sl";
-import { Link, useLocation } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { FaEye, FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { FaShare } from "react-icons/fa6";
 import PropTypes from 'prop-types';
-const SingleRent = () => {
+const SingleRent = ({ datas }) => {
     const { id, image, name, time, details, view } = datas;
-    const location = useLocation();
-    const { datas} = location.state || {};
+    const navigate = useNavigate();
+    const handleDetail = (id)=>{
+        navigate(`${id}`);
+    }
     console.log(datas);
     return (
         <div className="card shadow-xl hover:scale-105 transition-all duration-500" style={{
@@ -27,14 +29,14 @@ const SingleRent = () => {
                     <p className="text-lg ml-2">{time}</p>
                 </div>
                 <p className="text-[#686868]">{details}</p>
-                <Link to={{
-                    pathname: `commercial-rent/${id}`,
+                {/* <Link to={{
+                    pathname:`/commercial-rent/${id}`,
                     state:{datas}
                 }}
-                    datas:item={datas}
                     className="text-xl text-[#3BB296]">
                     View Details
-                </Link>
+                </Link> */}
+                <button onClick={()=>handleDetail(id)}>View</button>
                 <div className="flex justify-start items-center">
                     <FaEye className="text-[#686868] text-xl" />
                     <h4 className="ml-3 mr-4 text-[#686868] text-xl">{view}</h4>

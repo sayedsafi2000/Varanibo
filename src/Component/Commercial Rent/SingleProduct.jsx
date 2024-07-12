@@ -4,12 +4,25 @@ import bg from "../../assets/Images/Dort Varanibo.jpg";
 import LocationSelector from '../LocationSelector/LocationSelector';
 
 import PropTypes from 'prop-types';
-import { useLoaderData } from "react-router-dom";
-const SingleProduct = ({state}) => {
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import useCommercialRent from "../../Hooks/useCommercialRent";
+const SingleProduct = () => {
     // const { image, name, view} = item;
-    // const params = useParams();
-    const loadeData = useLoaderData();
-    console.log(state);
+    const params = useParams();
+    const id = params.id;
+
+    const [rent, setRent] = useState([]);
+    useEffect(() => {
+        fetch('Commercialrent.json')
+            .then(res => res.json())
+            .then(data => {
+                setRent(data);
+            });
+    }, []);
+    console.log(rent);
+
+
     const images = [
         {
             original: "https://picsum.photos/id/1018/1000/600/",
@@ -45,7 +58,7 @@ const SingleProduct = ({state}) => {
                         <ImageGallery className="w-full " items={images} />
                     </div>
                     <div className="">
-                        <h1>{loadeData.name}</h1>
+                        <h1>Ok</h1>
                         <p>মিরপুর ১ উত্তর বিশিল ৬ নাম্বার রোড,এই দোকান টি ভাড়া দেওয়া হবে। ১৫০ স্কয়ার ফিট, ভাড়া ৭০০০ অ্যাডভান্স ১লাখ মুদি, ওষুধ, হোটেল সহ যেকোনো ব্যাবসা করতে পারবে। +8801846952001,,01715699301</p>
                         <p>Contact: +8801846952001,,01715699301</p>
                         <strong>Location</strong>

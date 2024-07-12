@@ -4,7 +4,7 @@ import { FaPlus } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <div className="w-full bg-white shadow-xl shadow-black py-2 z-10" style={{
+        <div className="w-full bg-white shadow-xl shadow-black  z-10" style={{
 
         }}>
             <div className=" w-9/12 mx-auto flex justify-around items-center">
